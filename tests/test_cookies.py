@@ -1,5 +1,6 @@
 from playwright.sync_api import sync_playwright
 
+
 def test_ing_cookie_consent():
     with sync_playwright() as p:
         for browser_type in [p.chromium, p.firefox, p.webkit]:  
@@ -23,6 +24,5 @@ def test_ing_cookie_consent():
             assert session_cookie2["name"] == "cookiePolicyGDPR", "Cookie name: 'cookiePolicyGDPR' ma niepoprawną wartość!"
             assert session_cookie2["value"] == "3", "Cookie 'cookiePolicyGDPR' ma niepoprawną wartość!"
             assert "cookieCreateTimestamp" in session_cookie["value"], "Cookie 'cookiePolicyGDPR__details' ma niepoprawną wartość!"
-            page.wait_for_timeout(500)
-            print('Pozytywnie zweryfikowane cookies')
+
             browser.close()
