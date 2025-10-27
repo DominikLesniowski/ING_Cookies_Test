@@ -1,2 +1,4 @@
-# ING_Cookies_Test
-Zadanie rekrutacyjne dla ING
+## Wirtualne środowisko dla testu
+python3 -m venv venv  
+source venv/bin/activate
+
