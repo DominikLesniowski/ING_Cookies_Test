@@ -15,9 +15,7 @@ def test_ing_cookie_consent():
             cookie_page.open_url()
             cookie_page.customize_cookies_button()
             cookie_page.switch_toggle_analytics_cookies()
-            #asercja czy jest zaznaczone 
             cookie_page.accept_selected()
-            #upewnic sie , ze modal zniknal 
             cookies = cookie_page.get_all_cookies(context)
         
            
