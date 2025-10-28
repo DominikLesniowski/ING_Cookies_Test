@@ -1,5 +1,5 @@
 from playwright.sync_api import Page
-from pages.cookie_page.ing_cookie_page_selectors import button_customize ,switch_analytics_cookies, button_accept_selected
+from pages.cookie_page.ing_cookie_page_selectors import button_customize ,switch_analytics_cookies, button_accept_selected, is_toggle_analytics_checked
 
 class IngCookiePage:
    
@@ -14,6 +14,9 @@ class IngCookiePage:
 
    def switch_toggle_analytics_cookies(self):
         switch_analytics_cookies(self.page).click() 
+
+   def is_analytics_toggle_checked(self):
+     return is_toggle_analytics_checked(self.page)
 
    def accept_selected(self):
         button_accept_selected(self.page).click() 

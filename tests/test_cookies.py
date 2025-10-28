@@ -1,6 +1,3 @@
-import sys
-import os
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from playwright.sync_api import sync_playwright
 from pages.cookie_page.ing_cookie_page import IngCookiePage
 
@@ -15,7 +12,9 @@ def test_ing_cookie_consent():
             cookie_page.open_url()
             cookie_page.customize_cookies_button()
             cookie_page.switch_toggle_analytics_cookies()
+            assert cookie_page.is_analytics_toggle_checked(), "Toggle analityczny nie jest zaznaczony"
             cookie_page.accept_selected()
+            
             cookies = cookie_page.get_all_cookies(context)
         
            
