@@ -32,13 +32,7 @@ venv\Scripts\activate
 ```
 pip install -r requirements.txt
 ```
-
-## 4.Zainstaluj przeglądarki Playwright
-```
-playwright install
-```
-
-## 5.Uruchom test
+## 4.Uruchom test
 
 ```
 pytest tests/test_cookies.py
