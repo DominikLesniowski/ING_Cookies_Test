@@ -1,18 +1,18 @@
 # Instrukcja uruchomienia testu
 
-## 1.Sklonuj repozutorium
+## 1.Sklonuj repozytorium
 
 ### W terminalu wykonaj polecenie:
 ```
 git clone https://github.com/DominikLesniowski/ING_Cookies_Test.git
 ```
-### Przejdź do kataologu projektu:
+### Przejdź do katalogu projektu:
 ```
 cd ING_Cookies_Test
 ```
 ## 2.Utwórz i aktywuj wirtualne środowisko
 
-### W katalogu z projektem stworz venv:
+### W katalogu z projektem stwórz venv:
 ```
 python3 -m venv venv 
 ```
@@ -27,18 +27,18 @@ source venv/bin/activate
 venv\Scripts\activate
 ```
 
-# 3.Zainstaluj potrzebne pakiety
+## 3.Zainstaluj potrzebne pakiety
 
 ```
 pip install -r requirements.txt
 ```
 
-# 4.Zainstaluj przeglądarki Playwright
+## 4.Zainstaluj przeglądarki Playwright
 ```
 playwright install
 ```
 
-# 5.Uruchom test
+## 5.Uruchom test
 
 ```
 pytest tests/test_cookies.py
